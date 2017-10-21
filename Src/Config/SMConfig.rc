@@ -1,0 +1,696 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#include "..\Common\CommonResource.h"
+
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#include ""..\\Common\\CommonResource.h""\r\n"
+    "\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\SMConfig.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\idr_main.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 100
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "Application Name",IDC_ABOUTAPPNAME,40,10,132,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright",IDC_ABOUTCOPYRIGHT,40,36,132,8
+    DEFPUSHBUTTON   "&OK",IDOK,178,7,50,14,WS_GROUP
+    LTEXT           "This product is licensed to:",IDC_STATIC,40,64,132,8
+    LTEXT           "Registration Name",IDC_ABOUTREGNAME,52,76,116,16
+    LTEXT           "URL",IDC_ABOUTWEBSITE,40,47,132,8,SS_NOTIFY
+    LTEXT           "Date",IDC_ABOUTDATE,40,20,132,8,SS_NOPREFIX
+END
+
+IDD_GENERALPAGE DIALOGEX 0, 0, 340, 268
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "General"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Serial Port",IDC_STATIC,12,12,52,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_PORTNAME,68,12,48,80,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "Speed (BPS)",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_CENTERIMAGE | WS_GROUP,12,28,52,12
+    COMBOBOX        IDC_BAUDRATE,68,28,48,96,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "Byte Size",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_CENTERIMAGE | WS_GROUP,12,44,52,12
+    COMBOBOX        IDC_BYTESIZE,68,44,48,96,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "Parity",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_CENTERIMAGE | WS_GROUP,12,60,52,12
+    COMBOBOX        IDC_PARITY,68,60,48,96,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "Stop Bits",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_CENTERIMAGE | WS_GROUP,12,76,52,12
+    COMBOBOX        IDC_STOPBITS,68,76,48,96,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "Timestamp",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_CENTERIMAGE | WS_GROUP,12,92,52,12
+    COMBOBOX        IDC_TIMESTAMPFORMAT,68,92,48,96,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Event Log Settings",IDC_STATIC,144,12,164,64
+    CONTROL         "Report when the service starts and stops",
+                    IDC_LOGSTARTSTOP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    152,24,148,8
+    CONTROL         "Report the configuration",IDC_LOGCONFIG,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,152,36,148,8
+    CONTROL         "Report when timeouts occur",IDC_LOGTIMEOUTS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,152,48,148,8
+    CONTROL         "Report when e-mails are sent",IDC_LOGEMAIL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,152,60,148,8
+    CONTROL         "Start automatically when Windows starts",
+                    IDC_STARTAUTOMATICALLY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,152,84,148,8
+    LTEXT           "Log File",IDC_STATIC,12,108,52,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_LOGFILENAME,68,108,240,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Browse...",IDC_LOGFILENAMEBTN,68,124,48,16
+    PUSHBUTTON      "&Open",IDC_LOGOPEN,128,124,48,16
+    CONTROL         "Log Rotation",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_CENTERIMAGE | WS_GROUP,12,144,52,12
+    COMBOBOX        IDC_LOGROTATION,68,144,48,96,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "File Name Format",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_CENTERIMAGE | WS_GROUP,124,144,60,12
+    LTEXT           "",IDC_LOGROTATIONFILE,184,144,120,12,SS_CENTERIMAGE | 
+                    SS_SUNKEN
+    LTEXT           "Note: You must restart the service for changes to take effect.",
+                    IDC_STATIC,12,240,292,8
+END
+
+IDD_TIMEOUTPAGE DIALOGEX 0, 0, 340, 268
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Timeout Settings"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_TIMEOUTSECGRP,8,8,188,36
+    CONTROL         "Never timeout",IDC_NEVERTIMEOUT,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,12,16,180,8
+    CONTROL         "Timeout if no data is received in",IDC_ALLOWTIMEOUT,
+                    "Button",BS_AUTORADIOBUTTON,12,32,116,8
+    EDITTEXT        IDC_TIMEOUTSEC,128,28,32,12,ES_AUTOHSCROLL | WS_GROUP,
+                    WS_EX_RIGHT
+    LTEXT           "seconds",IDC_TIMEOUTSECTEXT1,164,32,28,8,NOT WS_GROUP
+    GROUPBOX        "",IDC_WARNINGINTERVALGRP,8,44,188,36
+    CONTROL         "Run timeout command only once",IDC_WARNINGINTERVALONCE,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,12,
+                    52,180,8
+    CONTROL         "Run timeout command every",IDC_WARNINGINTERVALREPEAT,
+                    "Button",BS_AUTORADIOBUTTON,12,68,106,8
+    EDITTEXT        IDC_WARNINGINTERVALSEC,118,64,32,12,ES_AUTOHSCROLL | 
+                    WS_GROUP,WS_EX_RIGHT
+    LTEXT           "seconds",IDC_WARNINGINTERVALTEXT1,154,68,38,8,NOT 
+                    WS_GROUP
+    GROUPBOX        "",IDC_TIMEOUTDAYSGRP,8,84,132,104
+    LTEXT           "Only timeout on the following days:",
+                    IDC_TIMEOUTDAYSTEXT1,12,92,124,8,NOT WS_GROUP
+    CONTROL         "Sunday",IDC_SUNDAY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,16,104,68,8
+    CONTROL         "Monday",IDC_MONDAY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,16,116,68,8
+    CONTROL         "Tuesday",IDC_TUESDAY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,16,128,68,8
+    CONTROL         "Wednesday",IDC_WEDNESDAY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,16,140,68,8
+    CONTROL         "Thursday",IDC_THURSDAY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,16,152,68,8
+    CONTROL         "Friday",IDC_FRIDAY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,16,164,68,8
+    CONTROL         "Saturday",IDC_SATURDAY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,16,176,68,8
+    GROUPBOX        "",IDC_TIMEOUTTIMESGRP,144,84,140,104
+    LTEXT           "Only timeout between the following times:",
+                    IDC_TIMEOUTTIMESTEXT1,148,92,132,8,NOT WS_GROUP
+    CONTROL         "Entire Day",IDC_ENTIREDAY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,152,105,49,8
+    CONTROL         "DateTimePicker1",IDC_TIMEBEGIN,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_UPDOWN | WS_TABSTOP | 0x8,152,116,
+                    64,12
+    LTEXT           "and",IDC_TIMEOUTTIMESTEXT2,152,132,64,8,NOT WS_GROUP
+    CONTROL         "DateTimePicker1",IDC_TIMEEND,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_UPDOWN | WS_TABSTOP | 0x8,152,144,
+                    64,12
+    GROUPBOX        "",IDC_TIMEOUTCMDGRP,8,192,320,68
+    LTEXT           "Custom timeout command",IDC_TIMEOUTCMDTEXT1,12,200,244,
+                    8,SS_CENTERIMAGE | NOT WS_GROUP
+    EDITTEXT        IDC_TIMEOUTCMD,16,212,252,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Browse...",IDC_TIMEOUTCMDBROWSEBTN,272,210,48,16
+    LTEXT           "Net Send recipient list (separate multiple recipients with commas)",
+                    IDC_TIMEOUTCMDTEXT2,12,229,244,8,SS_CENTERIMAGE | NOT 
+                    WS_GROUP
+    EDITTEXT        IDC_NETSENDLIST,16,240,252,12,ES_AUTOHSCROLL
+END
+
+IDD_REGDLG DIALOG DISCARDABLE  0, 0, 235, 184
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Registration"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_REGDLGNAME,44,124,168,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_REGDLGCODE,44,140,168,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Validate Code",IDC_REGDLGVALIDATE,44,160,68,14,
+                    WS_GROUP
+    DEFPUSHBUTTON   "&Close",IDOK,178,7,50,14,WS_GROUP
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "After purchasing this product, you will get your registration code which you should enter below along with your registration name.  When finished, click the Validate Code button.",
+                    IDC_STATIC,44,84,168,36
+    LTEXT           "Registration Name",IDC_REGDLGCURREGNAME,52,20,120,16
+    LTEXT           "URL",IDC_REGDLGWEBSITE,44,64,168,8,SS_NOTIFY
+    LTEXT           "This product is currently licensed to:",IDC_STATIC,44,8,
+                    128,8
+    LTEXT           "To purchase this product, please visit the following web site:",
+                    IDC_STATIC,44,44,168,16
+    LTEXT           "Name",IDC_STATIC,12,124,28,12,SS_CENTERIMAGE
+    LTEXT           "Code",IDC_STATIC,12,140,28,12,SS_CENTERIMAGE
+END
+
+IDD_EMAILPAGE DIALOGEX 0, 0, 340, 268
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "E-mail"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "SMTP Server",IDC_STATIC,12,28,56,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_SMTPSERVER,72,28,236,12,ES_AUTOHSCROLL
+    LTEXT           "From Address",IDC_STATIC,12,44,56,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_SMTPFROMADDRESS,72,44,236,12,ES_AUTOHSCROLL
+    LTEXT           "To Address",IDC_STATIC,12,60,56,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_SMTPTOADDRESS,72,60,236,12,ES_AUTOHSCROLL
+    LTEXT           "To e-mail the log file after each log rotation, fill in all three fields below.",
+                    IDC_STATIC,12,12,296,8
+    PUSHBUTTON      "&E-mail Current Log Now",IDC_SENDNOW,72,76,88,16
+END
+
+IDD_ODBCPAGE DIALOGEX 0, 0, 340, 268
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "ODBC"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Connect String",IDC_STATIC,12,36,56,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_CONNECTSTRING,72,36,236,36,ES_MULTILINE | WS_VSCROLL
+    PUSHBUTTON      "Build &Connect String...",IDC_BROWSEDSN,72,76,92,16
+    LTEXT           "SQL Statement",IDC_STATIC,12,96,56,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_SQLSTATEMENT,72,96,236,52,ES_MULTILINE | 
+                    ES_WANTRETURN | WS_VSCROLL
+    PUSHBUTTON      "&Build &SQL Statement...",IDC_BUILDSQLSTATEMENT,72,152,
+                    92,16
+    PUSHBUTTON      "&Execute With Test String",IDC_TEST,180,152,100,16
+    LTEXT           "Max Line Length",IDC_STATIC,12,172,56,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_MAXLINELENGTH,72,172,92,12,ES_AUTOHSCROLL
+    LTEXT           "In addition to or instead of writing to a log file, each line can be written to an ODBC data source.",
+                    IDC_STATIC,12,12,296,16
+END
+
+IDD_TABLELIST DIALOG DISCARDABLE  0, 0, 288, 157
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select a Table"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,228,8,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,228,25,50,14
+    LISTBOX         IDC_LIST,4,4,216,148,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,2,1,1
+ PRODUCTVERSION 1,2,1,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "Mu-Consulting (www.muconsulting.com)\0"
+            VALUE "FileDescription", "Serial Logger Service Configuration application\0"
+            VALUE "FileVersion", "1.21a\0"
+            VALUE "InternalName", "Serial Logger Service Configuration\0"
+            VALUE "LegalCopyright", "Copyright © 2002 Mu-Consulting\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "SerialLoggerConfig.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "Serial Logger Service Configuration\0"
+            VALUE "ProductVersion", "1.21a\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 93
+    END
+
+    IDD_GENERALPAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 333
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 261
+    END
+
+    IDD_TIMEOUTPAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 333
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 261
+    END
+
+    IDD_REGDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 177
+    END
+
+    IDD_EMAILPAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 333
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 261
+    END
+
+    IDD_ODBCPAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 333
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 261
+    END
+
+    IDD_TABLELIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 281
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_GENERALPAGE DLGINIT
+BEGIN
+    IDC_PORTNAME, 0x403, 5, 0
+0x4f43, 0x314d, "\000" 
+    IDC_PORTNAME, 0x403, 5, 0
+0x4f43, 0x324d, "\000" 
+    IDC_PORTNAME, 0x403, 5, 0
+0x4f43, 0x334d, "\000" 
+    IDC_PORTNAME, 0x403, 5, 0
+0x4f43, 0x344d, "\000" 
+    IDC_PORTNAME, 0x403, 5, 0
+0x4f43, 0x354d, "\000" 
+    IDC_PORTNAME, 0x403, 5, 0
+0x4f43, 0x364d, "\000" 
+    IDC_PORTNAME, 0x403, 5, 0
+0x4f43, 0x374d, "\000" 
+    IDC_PORTNAME, 0x403, 5, 0
+0x4f43, 0x384d, "\000" 
+    IDC_PORTNAME, 0x403, 5, 0
+0x4f43, 0x394d, "\000" 
+    IDC_PORTNAME, 0x403, 6, 0
+0x4f43, 0x314d, 0x0030, 
+    IDC_PORTNAME, 0x403, 6, 0
+0x4f43, 0x314d, 0x0031, 
+    IDC_PORTNAME, 0x403, 6, 0
+0x4f43, 0x314d, 0x0032, 
+    IDC_PORTNAME, 0x403, 6, 0
+0x4f43, 0x314d, 0x0033, 
+    IDC_PORTNAME, 0x403, 6, 0
+0x4f43, 0x314d, 0x0034, 
+    IDC_PORTNAME, 0x403, 6, 0
+0x4f43, 0x314d, 0x0035, 
+    IDC_PORTNAME, 0x403, 6, 0
+0x4f43, 0x314d, 0x0036, 
+    IDC_BAUDRATE, 0x403, 4, 0
+0x3131, 0x0030, 
+    IDC_BAUDRATE, 0x403, 4, 0
+0x3033, 0x0030, 
+    IDC_BAUDRATE, 0x403, 5, 0
+0x3231, 0x3030, "\000" 
+    IDC_BAUDRATE, 0x403, 5, 0
+0x3432, 0x3030, "\000" 
+    IDC_BAUDRATE, 0x403, 5, 0
+0x3834, 0x3030, "\000" 
+    IDC_BAUDRATE, 0x403, 5, 0
+0x3639, 0x3030, "\000" 
+    IDC_BAUDRATE, 0x403, 6, 0
+0x3931, 0x3032, 0x0030, 
+    IDC_BAUDRATE, 0x403, 6, 0
+0x3833, 0x3034, 0x0030, 
+    IDC_BAUDRATE, 0x403, 6, 0
+0x3735, 0x3036, 0x0030, 
+    IDC_BAUDRATE, 0x403, 7, 0
+0x3131, 0x3235, 0x3030, "\000" 
+    IDC_BYTESIZE, 0x403, 2, 0
+0x0034, 
+    IDC_BYTESIZE, 0x403, 2, 0
+0x0035, 
+    IDC_BYTESIZE, 0x403, 2, 0
+0x0036, 
+    IDC_BYTESIZE, 0x403, 2, 0
+0x0037, 
+    IDC_BYTESIZE, 0x403, 2, 0
+0x0038, 
+    IDC_PARITY, 0x403, 5, 0
+0x6f4e, 0x656e, "\000" 
+    IDC_PARITY, 0x403, 4, 0
+0x644f, 0x0064, 
+    IDC_PARITY, 0x403, 5, 0
+0x7645, 0x6e65, "\000" 
+    IDC_PARITY, 0x403, 5, 0
+0x614d, 0x6b72, "\000" 
+    IDC_PARITY, 0x403, 6, 0
+0x7053, 0x6361, 0x0065, 
+    IDC_STOPBITS, 0x403, 2, 0
+0x0031, 
+    IDC_STOPBITS, 0x403, 4, 0
+0x2e31, 0x0035, 
+    IDC_STOPBITS, 0x403, 2, 0
+0x0032, 
+    IDC_TIMESTAMPFORMAT, 0x403, 3, 0
+0x6f4e, "\000" 
+    IDC_TIMESTAMPFORMAT, 0x403, 4, 0
+0x6559, 0x0073, 
+    IDC_LOGROTATION, 0x403, 6, 0
+0x654e, 0x6576, 0x0072, 
+    IDC_LOGROTATION, 0x403, 8, 0
+0x6f4d, 0x746e, 0x6c68, 0x0079, 
+    IDC_LOGROTATION, 0x403, 7, 0
+0x6557, 0x6b65, 0x796c, "\000" 
+    IDC_LOGROTATION, 0x403, 6, 0
+0x6144, 0x6c69, 0x0079, 
+    IDC_LOGROTATION, 0x403, 7, 0
+0x6f48, 0x7275, 0x796c, "\000" 
+    IDC_LOGROTATION, 0x403, 9, 0
+0x694d, 0x756e, 0x6574, 0x796c, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDM_POPUPS MENU DISCARDABLE 
+BEGIN
+    POPUP "Instance Document"
+    BEGIN
+        MENUITEM "&Start",                      ID_SERVICE_START
+        MENUITEM "S&top",                       ID_SERVICE_STOP
+        MENUITEM "&Restart",                    ID_SERVICE_RESTART
+        MENUITEM SEPARATOR
+        MENUITEM "&Continue",                   ID_SERVICE_CONTINUE
+        MENUITEM "&Pause",                      ID_SERVICE_PAUSE
+        MENUITEM SEPARATOR
+        MENUITEM "Start &Automatically",        ID_SERVICE_STARTAUTOMATICALLY
+        , CHECKED
+        MENUITEM SEPARATOR
+        MENUITEM "&Properties...",              ID_EDIT_PROPERTIES
+        MENUITEM SEPARATOR
+        MENUITEM "&Duplicate",                  ID_EDIT_DUPLICATE
+        MENUITEM SEPARATOR
+        MENUITEM "De&lete",                     ID_EDIT_DELETE
+    END
+    POPUP "Instance Blank"
+    BEGIN
+        MENUITEM "&New",                        ID_EDIT_NEW
+    END
+END
+
+IDR_MAINFRAME MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Save Settings\tCtrl+S",      ID_FILE_SAVE
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Properties...",              ID_EDIT_PROPERTIES
+        MENUITEM SEPARATOR
+        MENUITEM "&New",                        ID_EDIT_NEW
+        MENUITEM "&Duplicate",                  ID_EDIT_DUPLICATE
+        MENUITEM SEPARATOR
+        MENUITEM "Select A&ll\tCtrl+A",         ID_EDIT_SELECTALL
+        MENUITEM SEPARATOR
+        MENUITEM "De&lete",                     ID_EDIT_DELETE
+    END
+    POPUP "&Service"
+    BEGIN
+        MENUITEM "&Start",                      ID_SERVICE_START
+        MENUITEM "S&top",                       ID_SERVICE_STOP
+        MENUITEM "&Restart",                    ID_SERVICE_RESTART
+        MENUITEM SEPARATOR
+        MENUITEM "&Continue",                   ID_SERVICE_CONTINUE
+        MENUITEM "&Pause",                      ID_SERVICE_PAUSE
+        MENUITEM SEPARATOR
+        MENUITEM "Start &Automatically",        ID_SERVICE_STARTAUTOMATICALLY
+        , CHECKED
+        MENUITEM SEPARATOR
+        MENUITEM "&Event Viewer",               ID_EVENTVIEWER
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "Serial Logger Service &Help", ID_HELP
+        MENUITEM SEPARATOR
+        MENUITEM "&Register Product...",        ID_REGISTER
+        MENUITEM "&About Serial Logger Service", ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS DISCARDABLE 
+BEGIN
+    "A",            ID_EDIT_SELECTALL,      VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_DELETE,         VIRTKEY, NOINVERT
+    VK_RETURN,      ID_EDIT_PROPERTIES,     VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "Serial Logger Service Configuration"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Serial Logger Service Configuration"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDERR_CANT_OPEN_PORT    "Can't open port."
+    IDERR_CANT_READ_PORT    "Can't read from the port."
+    IDERR_CANT_OPEN_LOG_FILE "Can't open the log file."
+    IDERR_CANT_WRITE_LOG_FILE "Can't write to the log file."
+    IDERR_CANT_OPEN_ODBC    "Can't connect to the ODBC data source."
+    IDERR_CANT_WRITE_ODBC   "Can't execute ODBC query."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDERR_PORT_NAME_MISSING "The port name is not specified.  Please run the configuration application."
+    IDERR_LOG_FILENAME_MISSING 
+                            "The log filename is not specified.  Please run the configuration application."
+    IDERR_CANT_WRITE_REGKEY "Can't write to the registry key HKEY_LOCAL_MACHINE\\SOFTWARE\\Mu-Consulting\\SerialLoger.  Please check registry permissions."
+    IDERR_EXPIRED           "The 30 day evaluation period has expired."
+    IDERR_CANT_READ_INSTANCE_REGKEY 
+                            "Can't read the registry key HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\SERVICES\\SerialLoggerX\\Parameters.  Please check registry permissions and/or run the configuration application."
+    IDERR_GENERIC_RECOVERABLE_ERROR "Generic recoverable error."
+    IDERR_ASSERTION_FAILED  "Assertion failed.  The application has encountered an internal error."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_SAVE            "Save settings to the registry"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "View product version and registration details"
+    ID_APP_EXIT             "Exit application (services will continue to run)"
+    ID_HELP                 "View help documentation"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_PROPERTIES      "Edit properties for the selected instances"
+    ID_EDIT_DUPLICATE       "Make a copy of the selected instance"
+    ID_EDIT_DELETE          "Delete the selected instances"
+    ID_REGISTER             "Register this product by entering your registration code"
+    ID_SERVICE_STARTAUTOMATICALLY 
+                            "Set selected services to start when Windows starts."
+    ID_EDIT_NEW             "Create a new instance"
+    ID_SERVICE_START        "Save settings and then start the selected instances"
+    ID_SERVICE_STOP         "Stop the selected instances"
+    ID_SERVICE_RESTART      "Save settings and then restart the selected instances"
+    ID_SERVICE_CONTINUE     "Continue selected paused instances"
+    ID_SERVICE_PAUSE        "Pause selected instances"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_SELECTALL       "Select all instances"
+    ID_EVENTVIEWER          "Open the Windows Event Viewer to view service messages"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\SMConfig.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,55 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="keywords" content="running, start, stop, pause, continue">
+<title>Running</title>
+<link rel="stylesheet" type="text/css" href="coua.css">
+<object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<param name="keyword" value="running the service">
+	<param name="keyword" value="starting the service">
+	<param name="keyword" value="stopping the service">
+	<param name="keyword" value="pausing the service">
+	<param name="keyword" value="continuing the service">
+</object>
+
+</head>
+
+<body>
+
+<h1>Running</h1>
+
+<p>After Serial Logger Service has been installed and configured, the service can be started.
+The service can be started using the Serial Logger Service Configuration program, the Windows Services applet in
+the Control Panel, or any other service control program.  If the <b>Start automatically when
+Windows starts</b> checkbox is checked, then the service will startup automatically with Windows.</p>
+
+<p>The Serial Logger Service Configuration program does <i>not</i> need to be 
+running in order for the actual services to run, as they run in the background.</p>
+
+<p>Any warnings, errors, timeouts, or other significant events will be recorded in the Windows Application Event Log
+which can be viewed by using <a href="eventviewer.html">Event Viewer</a>.</p>
+
+<p>While the service is running, any data received on the serial port will be immediately written to the log
+file. If the Timestamps option is set to No, the exact binary data received on the serial port will be copied
+to the log file.
+Serial Logger Service will not add any timestamps, carriage-returns, line-feeds, or modify the data in any
+way when it is written to the log file in this mode.</p>
+
+<p>When the service starts, it does not overwrite the log file if it exists.  Instead, it just appends
+newly received data to the end of the log file.  If you want to start with a blank file, you must
+ensure that the log file doesn't exist or is blank before starting the service.</p>
+
+<p>As long as the service is running, the log file is locked so that no other application can modify it.
+However, if the service is paused, the log file is closed so that other applications can read, 
+write, move, or delete it.  When the service is resumed, the
+log file is reopened (or recreated if necessary) and any
+data received on the serial port while the service was paused is written to the new log file. 
+This mechanism allows for a very
+flexible method for importing the data into a database or another application without
+risking losing data during the import process. Pausing the service has no effect 
+on ODBC logging.</p>
+
+</body>
+
+</html>

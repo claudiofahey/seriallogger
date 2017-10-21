@@ -1,0 +1,46 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<title>Instance Properties (E-mail)</title>
+<link rel="stylesheet" type="text/css" href="coua.css">
+<object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<param name="keyword" value="e-mail">
+	<param name="keyword" value="email">
+	<param name="keyword" value="SMTP">
+	<param name="keyword" value="from address">
+	<param name="keyword" value="to address">
+	<param name="keyword" value="address">
+</object>
+</head>
+
+<body>
+
+<h1>Instance Properties (E-mail)</h1>
+<p>The E-mail page is used to specify the e-mail parameters that are needed in order to have
+Serial Logger Service automatically e-mail the log file after each log rotation.
+These parameters are not used if the log rotation setting is set to <strong>None</strong>.
+All of the following parameters are required in order to have Serial Logger Service e-mail
+the log file.</p>
+<dl>
+  <dt>SMTP Server <em>(required)</em></dt>
+  <dd>This is the DNS name or IP address of the SMTP server to use to relay the message to the
+  recipient.  It is usually something like <strong>mail.myisp.com</strong> or
+  <strong>smtp.myisp.com</strong>.</dd>
+  <dt>From Address <em>(required)</em></dt>
+  <dd>This is the e-mail address that will be used as the e-mail's sender.  Any replies or
+  mail delivery errors will be sent to this e-mail address.  It should have the format
+  <strong>user@mydomain.com</strong>.</dd>
+  <dt>To Address <em>(required)</em></dt>
+  <dd>This is the e-mail address that Serial Logger Service will send the log file to.
+  It should have the format <strong>user@mydomain.com</strong>.  If you wish
+  to send to multiple recipients, you can enter multiple e-mail addresses separated
+  by commas (<strong>user@mydomain.com, user2@mydomain2.com</strong>).</dd>
+  <dt>E-mail Current Log Now button</dt>
+  <dd>Click this button to e-mail the current log file immediately. This can also be
+  used to test the e-mail settings.</dd>
+</dl>
+
+</body>
+
+</html>

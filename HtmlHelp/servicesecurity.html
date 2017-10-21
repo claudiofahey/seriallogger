@@ -1,0 +1,37 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<title>Service Security</title>
+<link rel="stylesheet" type="text/css" href="coua.css">
+<object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<param name="keyword" value="service security">
+	<param name="keyword" value="security">
+	<param name="keyword" value="UNC">
+</object>
+
+</head>
+
+<body>
+
+<h1>Service Security</h1>
+
+<p>Since Serial Logger Service runs as a service, it does not run under the logged in user's security
+context.  Instead, it defaults to running under the SYSTEM account which only has access to the
+workstation on which the service is running.  This creates a problem if the log file resides
+on a remote workstation (for example, if a UNC path such as "\\logserver\logs\log.txt" is specified),
+if the custom timeout command is on a remote workstation or uses resources on a remote
+workstation, or if an ODBC connection requires a specific user to logon.</p>
+
+<p>To resolve this problem, the log file, custom timeout command, and/or ODBC 
+database server must be
+on the local workstation and the SYSTEM account must have proper access.</p>
+
+<p>Alternatively, the
+service can be configured to logon as a particular user who has proper access.  To change the logon
+user for the service, you can use the Services applet in the Control Panel.  Please refer
+to your Windows documentation for further information about service security.</p>
+
+</body>
+
+</html>

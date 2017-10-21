@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Serial Logger Service</title>
+<link rel="stylesheet" type="text/css" href="coua.css" /><object
+type="application/x-oleobject"
+classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e"><param name="keyword"
+value="overview" />
+</object>
+</head>
+<body>
+<h1 style="font-size: 150%">Serial Logger Service 1.21e</h1>
+
+<h1>Introduction</h1>
+
+<p>Serial Logger Service is a Windows NT/2000/XP service that records all data
+received on a serial port to a file on a disk or to an ODBC data source. It was
+originally designed to record telephone traffic data from a phone system (PBX)
+for later analysis. For this reason, it was designed to be very robust and
+includes features to notify an administrator if no data is received in a
+certain amount of time. However, Serial Logger Service is generic enough to be
+useful whenever one-way serial traffic needs to be recorded.</p>
+
+<p>Now Serial Logger Service has the capability to run multiple instances
+simultaneously so that multiple ports can be logged.</p>
+
+<p>Unlike most other serial logging applications, Serial Logger Service runs as
+a service so that it starts as soon as the operating system starts and doesn't
+require a user to log in and run it. It will continue to run even as users
+logon and logoff the workstation. Since services are an advanced operating
+system feature, Serial Logger Service does not run on Windows 95/98/Me.</p>
+
+<h1>Getting started with Serial Logger Service</h1>
+
+<p>After you have successfully installed Serial Logger Service, use the
+following simple steps to configure and run it.</p>
+
+<ol>
+<li>Open the Serial Logger Service Configuration program from the Start
+Menu.</li>
+
+<li>Double-click on the first instance to edit its properties.</li>
+
+<li><a href="config-general.html">Enter the serial port parameters (port name,
+speed, parity, etc.)</a>.</li>
+
+<li><a href="config-general.html">Enter the log filename that the service will
+write to</a>. Then click OK to accept the properties.</li>
+
+<li><a href="running.html">Right-click on the first instance and choose Start
+from the popup menu. This will start the first service instance in the
+background</a>.</li>
+
+<li>Close the Serial Logger Service Configuration program. Any running
+instances will continue to run in the background, recording any data received
+to the specified log files.</li>
+</ol>
+
+<h1>More Topics</h1>
+
+<ul>
+<li><a href="installation.html">Installation</a></li>
+
+<li><a href="config.html">Configuration</a></li>
+
+<li><a href="running.html">Running</a></li>
+
+<li><a href="faq.html">Frequently Asked Questions</a></li>
+
+<li><a href="applications.html">Advanced Applications</a></li>
+</ul>
+
+<h1>Miscellaneous</h1>
+
+<ul>
+<li><a href="distribution.html">Distribution</a></li>
+
+<li><a href="licensing.html">Licensing</a></li>
+
+<li><a href="unregisteredrestrictions.html">Restrictions in the Unregistered
+Version</a></li>
+
+<li><a href="howtoregister.html">How to Register</a></li>
+
+<li><a href="revisionhistory.html">Revision History (What's New)</a></li>
+
+<li><a href="contact.html">How To Contact &micro;-Consulting</a></li>
+</ul>
+</body>
+</html>
+

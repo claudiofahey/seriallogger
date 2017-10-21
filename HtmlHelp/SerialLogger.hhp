@@ -1,0 +1,29 @@
+[OPTIONS]
+Auto Index=Yes
+Compatibility=1.1 or later
+Compiled file=SerialLogger.chm
+Contents file=TableOfContents.hhc
+Default topic=index.html
+Display compile progress=Yes
+Full-text search=Yes
+Language=0x409 English (United States)
+Title=Serial Logger Service
+
+
+[FILES]
+index.html
+
+[ALIAS]
+IDH_EMAILPAGE=config-email.html
+IDH_EVENTVIEWER=eventviewer.html
+IDH_GENERALPAGE=config-general.html
+IDH_ODBCPAGE=config-odbc.html
+IDH_REGDLG=howtoregister.html
+IDH_REGISTER=howtoregister.html
+IDH_TIMEOUTPAGE =config-timeout.html
+
+[MAP]
+#include SerialLogger.hm
+
+[INFOTYPES]
+

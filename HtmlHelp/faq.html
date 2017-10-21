@@ -1,0 +1,63 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<title>Frequently Asked Questions</title>
+<link rel="stylesheet" type="text/css" href="coua.css">
+<object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<param name="keyword" value="FAQ">
+	<param name="keyword" value="troubleshooting">
+	<param name="keyword" value="multiple serial ports">
+</object>
+
+</head>
+
+<body>
+
+<h1>Frequently Asked Questions</h1>
+
+<ol>
+
+<li><p><b>After I start the service, it stops immediately.</b></p>
+<p>This is usually caused by an invalid or in-use serial port or log file.  In 
+the unregistered version, this will also occur if the service is started outside 
+the 30 day evaluation period. Please refer to the
+<a href="eventviewer.html">Windows Application Event Log</a> to see exactly why the service terminated. 
+Click
+<a href="unregisteredrestrictions.html">here</a> to find out about restrictions in the
+unregistered version.</p></li>
+
+<li><p><b>After I start the service, it stops after a few minutes, hours, or days.</b></p>
+<p>The unregistered version will run for a random amount of time and then stop. Please refer to the
+<a href="eventviewer.html">Windows Event Log</a> to see exactly why the service terminated. 
+Click
+<a href="unregisteredrestrictions.html">here</a> to find out about restrictions in the
+unregistered version.</p></li>
+
+<li><p><b>Can Serial Logger Service monitor more than one serial port?</b></p>
+<p>Yes! Support for multiple instances is a new feature added to version 1.2.  Each serial port can be
+logged to a separate log file.</p></li>
+
+<li><p><b>Can multiple ports be written to the same log file?</b></p>
+<p>No. Each instance must have exclusive write access to its log file.</p></li>
+
+<li><p><b>How do I send a "login" or "start" command to the serial device that I want to monitor?</b></p>
+<p>Click <a href="application-login.html">here</a> for details.</p></li>
+
+<li><p><b>How can I manually rotate the log file?</b></p>
+<p>Click <a href="application-ondemandrotate.html">here</a> for details.</p></li>
+
+<li><p><b>How can I view the serial port data in real time?</b></p>
+<p>
+	If you want to view data as it comes in, you can use a program such as the Unix-like "tail" program
+	in combination with Serial Logger Service.  You can download a "free" version of Tail for Win32 from
+	<a href="http://tailforwin32.sourceforge.net/">here</a>.
+</p>
+</li>
+
+</ol>
+
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+# Microsoft Developer Studio Generated Dependency File, included by SerialLogger.mak
+
+..\CSmtp\Base64.cpp : \
+	"..\..\..\..\program files\microsoft sdk\include\basetsd.h"\
+	"..\..\..\..\program files\microsoft sdk\include\guiddef.h"\
+	"..\..\..\..\program files\microsoft sdk\include\propidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\reason.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shtypes.h"\
+	"..\..\..\..\program files\microsoft sdk\include\stralign.h"\
+	"..\..\..\..\program files\microsoft sdk\include\tvout.h"\
+	"..\..\..\..\program files\microsoft sdk\include\winefs.h"\
+	"..\CSmtp\Base64.h"\
+	"..\csmtp\stdafx.h"\
+	
+
+..\Common\BuildTimestamp.cpp : \
+	"..\Common\BuildTimestamp.h"\
+	
+
+..\..\..\RegCode\RegCodeCommon.cpp : \
+	"..\..\..\RegCode\RegCodeCommon.h"\
+	
+
+.\SerialLogger.cpp : \
+	"..\..\..\..\program files\microsoft sdk\include\basetsd.h"\
+	"..\..\..\..\program files\microsoft sdk\include\guiddef.h"\
+	"..\..\..\..\program files\microsoft sdk\include\htmlhelp.h"\
+	"..\..\..\..\program files\microsoft sdk\include\propidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\reason.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shtypes.h"\
+	"..\..\..\..\program files\microsoft sdk\include\stralign.h"\
+	"..\..\..\..\program files\microsoft sdk\include\tvout.h"\
+	"..\..\..\..\program files\microsoft sdk\include\winefs.h"\
+	"..\Common\BuildTimestamp.h"\
+	"..\Common\CommonResource.h"\
+	"..\Common\SerialLoggerCommon.h"\
+	"..\CSmtp\Base64.h"\
+	"..\CSmtp\Smtp.h"\
+	".\SerialLogger.h"\
+	".\SerialLoggerMsg.h"\
+	
+
+..\Common\SerialLoggerCommon.cpp : \
+	"..\..\..\..\program files\microsoft sdk\include\basetsd.h"\
+	"..\..\..\..\program files\microsoft sdk\include\guiddef.h"\
+	"..\..\..\..\program files\microsoft sdk\include\htmlhelp.h"\
+	"..\..\..\..\program files\microsoft sdk\include\propidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\reason.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shtypes.h"\
+	"..\..\..\..\program files\microsoft sdk\include\stralign.h"\
+	"..\..\..\..\program files\microsoft sdk\include\tvout.h"\
+	"..\..\..\..\program files\microsoft sdk\include\winefs.h"\
+	"..\Common\BuildTimestamp.h"\
+	"..\Common\SerialLoggerCommon.h"\
+	"..\CSmtp\Base64.h"\
+	"..\CSmtp\Smtp.h"\
+	
+
+!IF  "$(CFG)" == "SerialMon - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "SerialMon - Win32 Debug"
+
+!ELSEIF  "$(CFG)" == "SerialMon - Win32 MCD Debug"
+
+!ELSEIF  "$(CFG)" == "SerialMon - Win32 MCD Release"
+
+!ENDIF 
+
+.\Service.cpp : \
+	"..\..\..\..\program files\microsoft sdk\include\basetsd.h"\
+	"..\..\..\..\program files\microsoft sdk\include\guiddef.h"\
+	"..\..\..\..\program files\microsoft sdk\include\htmlhelp.h"\
+	"..\..\..\..\program files\microsoft sdk\include\propidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\reason.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shtypes.h"\
+	"..\..\..\..\program files\microsoft sdk\include\stralign.h"\
+	"..\..\..\..\program files\microsoft sdk\include\tvout.h"\
+	"..\..\..\..\program files\microsoft sdk\include\winefs.h"\
+	"..\Common\BuildTimestamp.h"\
+	"..\Common\CommonResource.h"\
+	"..\Common\SerialLoggerCommon.h"\
+	"..\CSmtp\Base64.h"\
+	"..\CSmtp\Smtp.h"\
+	".\SerialLogger.h"\
+	".\SerialLoggerMsg.h"\
+	
+
+..\CSmtp\Smtp.cpp : \
+	"..\..\..\..\program files\microsoft sdk\include\basetsd.h"\
+	"..\..\..\..\program files\microsoft sdk\include\guiddef.h"\
+	"..\..\..\..\program files\microsoft sdk\include\propidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\reason.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shtypes.h"\
+	"..\..\..\..\program files\microsoft sdk\include\stralign.h"\
+	"..\..\..\..\program files\microsoft sdk\include\tvout.h"\
+	"..\..\..\..\program files\microsoft sdk\include\winefs.h"\
+	"..\CSmtp\Base64.h"\
+	"..\CSmtp\Smtp.h"\
+	"..\csmtp\stdafx.h"\
+	
+
+.\Utility.cpp : \
+	"..\..\..\..\program files\microsoft sdk\include\basetsd.h"\
+	"..\..\..\..\program files\microsoft sdk\include\guiddef.h"\
+	"..\..\..\..\program files\microsoft sdk\include\htmlhelp.h"\
+	"..\..\..\..\program files\microsoft sdk\include\propidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\reason.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shtypes.h"\
+	"..\..\..\..\program files\microsoft sdk\include\stralign.h"\
+	"..\..\..\..\program files\microsoft sdk\include\tvout.h"\
+	"..\..\..\..\program files\microsoft sdk\include\winefs.h"\
+	"..\Common\BuildTimestamp.h"\
+	"..\Common\CommonResource.h"\
+	"..\Common\SerialLoggerCommon.h"\
+	"..\CSmtp\Base64.h"\
+	"..\CSmtp\Smtp.h"\
+	".\SerialLogger.h"\
+	".\SerialLoggerMsg.h"\
+	
+
+.\SerialLogger.rc : \
+	".\MSG00001.bin"\
+	".\SerialLoggerMsg.rc"\
+	

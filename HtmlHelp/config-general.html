@@ -1,0 +1,109 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<title>Instance Properties (General)</title>
+<link rel="stylesheet" type="text/css" href="coua.css">
+<object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<param name="keyword" value="configuring">
+	<param name="keyword" value="Serial port">
+	<param name="keyword" value="Speed (BPS)">
+	<param name="keyword" value="BPS">
+	<param name="keyword" value="Byte Size">
+	<param name="keyword" value="bits">
+	<param name="keyword" value="Parity">
+	<param name="keyword" value="Stop Bits">
+	<param name="keyword" value="Timestamp">
+	<param name="keyword" value="Log File">
+	<param name="keyword" value="Log Rotation">
+	<param name="keyword" value="rotation">
+	<param name="keyword" value="Event Log Settings">
+</object>
+</head>
+
+<body>
+
+<h1>Instance Properties (General)</h1>
+<p>The general page contains the basic configuration settings for the service 
+instance.</p>
+<dl>
+  <dt>Serial port</dt>
+  <dd>This is the serial port which the service will read from. The port may be 
+  selected from the list or it may be typed in manually if it is not on the list. 
+  When the service starts, it must have exclusive access to this port.&nbsp; No 
+  other applications may be using this port.</dd>
+  <dt>Speed (BPS)</dt>
+  <dd>This is the port speed in bits per second, sometimes called the baud rate. 
+  The speed may be selected from the list or it may be typed in manually if it is 
+  not on the list.</dd>
+  <dt>Byte Size</dt>
+  <dd>This is the number of bits per byte. It is usually 7 (with parity) or 8 (without 
+  parity) but can be any value between 4 and 8.</dd>
+  <dt>Parity</dt>
+  <dd>The parity can be none, odd, even, mark, or space.</dd>
+  <dt>Stop Bits</dt>
+  <dd>The number of stop bits can be 1, 1.5, or 2.</dd>
+  <dt><a name="Timestamp">Timestamp</a></dt>
+  <dd>When set to Yes, each line in the log file will be prefixed with the current time in
+  the format "YYYY-MM-DD HH:MM:SS.sss:". Resolution up the millisecond is provided for
+  time-sensitive applications.</dd>
+  <dt>Log File</dt>
+  <dd>The log file is the full path to the file which will be written by the service. 
+  Any data received from the specified serial port will be written to the log file. 
+  No translation is performed on the data received from the serial port. If you 
+  are using file security (NTFS), then you must ensure that the service account has write 
+  access to this file. By default, the service account is the SYSTEM 
+  built-in account. If the log file refers to a UNC path (ie. \\myserver\logs\log.txt), 
+  then you must set the service account to a valid user with access to the specified 
+  server.  Please click <a href="servicesecurity.html">here</a> for more information
+  regarding service security.</dd>
+  <dt>Browse button</dt>
+  <dd>Click this button to open a file dialog that will allow to select a log file
+  path and name.</dd>
+  <dt>Open button</dt>
+  <dd>Click this button to view the log file. If the file type is associated with an
+  application, the application will be started.  Otherwise, Windows Notepad will be
+  started. If Log Rotation is enabled, the current log file will be opened.
+  <b>Note:</b> Some application may not be able to open the file when the
+  service is running.  If the application reports a file in use error, you may
+  need to <a href="running.html">pause</a> the service before opening the log file in the application.</dd>
+  <dt><a name="LogRotation">Log Rotation</a></dt>
+  <dd>When this feature is enabled (any setting other than None), the log file name
+  is time stamped and a new log file is created periodically.  The time stamp format
+  depends on the selected period.  For instance, if the Log File is set to
+  "pbx.log" and the Log Rotation setting is Daily, then each log file created
+  will have the format "pbxYYYYMMDD.log".  On March 21st, 2002, the log file
+  will be "pbx20020321.log".  Please note that the final extension (after the final period),
+  remains at the end of the file name.  The following table shows the possible values
+  for this setting:
+  <table>
+  <tr><th>Log Rotation</th> <th>New Log On</th> <th>File Name Suffix Format</th></tr>
+  <tr><td>None</td> <td>never</td> <td><i>none</i></td></tr>
+  <tr><td>Monthly</td> <td>1st of month at 00:00:00 (midnight)</td> <td>yyyymm</td></tr>
+  <tr><td>Weekly</td> <td>Sunday at 00:00:00</td> <td>yyyymmdd</td></tr>
+  <tr><td>Daily</td> <td>00:00:00</td> <td>yyyymmdd</td></tr>
+  <tr><td>Hourly</td> <td><i>hh</i>:00:00, <i>hh</i> = 00 to 23</td> <td>yyyymmddhh</td></tr>
+  <tr><td>Minutely</td> <td><i>hh</i>:<i>mm</i>:00</td> <td>yyyymmddhhmm</td></tr>
+  </table>
+  </dd>  
+  <dt>Event Log Settings</dt>
+  <dd>The service records significant events to the Windows Event Log. Select which 
+  (if any) events should be recorded in the Application Event Log.  Use 
+  <a href="eventviewer.html">Event Viewer</a> to view these events.</dd>
+  <dt>Start automatically when Windows starts</dt>
+  <dd>Check this box to mark the service as Automatic. This causes the service to 
+  start when Windows starts, even before the a user logs on. This should be checked 
+  if you want to make sure that the service always runs.</dd>
+  <dt>OK button</dt>
+  <dd>Click this button to accept the service instance paramters.  The configuration is not saved
+  until the <b>Save Settings</b> menu command is selected.  Also any configuration changes
+  will not take effect until the service is restarted.</dd>
+  <dt>Cancel button</dt>
+  <dd>Click this button to cancel any changes made to the service instance parameters.</dd>
+  <dt>Help button</dt>
+  <dd>Opens the on-line help.</dd>
+</dl>
+
+</body>
+
+</html>

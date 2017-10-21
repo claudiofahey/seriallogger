@@ -1,0 +1,67 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<title>Instance Properties (Timeout Settings)</title>
+<link rel="stylesheet" type="text/css" href="coua.css">
+<object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<param name="keyword" value="timeouts">
+	<param name="keyword" value="configuring">
+	<param name="keyword" value="Never timeout">
+	<param name="keyword" value="Timeout if no data is received in...">
+	<param name="keyword" value="Run timeout command only once">
+	<param name="keyword" value="Run timeout command every...">
+	<param name="keyword" value="Only timeout on the following days">
+	<param name="keyword" value="Only timeout between the following times">
+	<param name="keyword" value="Custom timeout command">
+	<param name="keyword" value="Net Send recipient list">
+</object>
+</head>
+
+<body>
+
+<h1>Instance Properties (Timeout Settings)</h1>
+<p>The Timeout Settings page contains advanced settings usually used to notify an administrator
+if no data is received on the serial port in a certain amount of time.</p>
+<dl>
+  <dt>Never timeout</dt>
+  <dd>Select this if you do not want to use timeouts.  This is the default selection.
+  All other settings on this page are disregarded if this is selected.</dd>
+  <dt>Timeout if no data is received in <i>x</i> seconds</dt>
+  <dd>Select this if you want to use timeouts.  If no data is received on the serial port
+  after this many seconds, then the timeout command specified below will be run.</dd>
+  <dt>Run timeout command only once</dt>
+  <dd>If this is selected, the timeout command specified below will be run only once for each idle period.</dd>
+  <dt>Run timeout command every <i>x</i> seconds</dt>
+  <dd>If this is selected, the timeout command will run every <i>x</i> seconds until at least one
+  character is received on the serial port.</dd>
+  <dt>Only timeout on the following days</dt>
+  <dd>Specify which days of the week should be monitored for timeouts.  For example, if you are using 
+  Serial Logger Service to monitor a PBX system which has little or no phone traffic on the weekends, then
+  you can select only Monday through Friday.</dd>
+  <dt>Only timeout between the following times</dt>
+  <dd>Specify which times of the day should be monitored for timeouts.  If you select the Entire Day checkbox,
+  then the entire day from midnight to the following midnight will be monitored.  The time range specified
+  will apply to all days of the week that are checked in the preceding section.  For example, if you are using 
+  Serial Logger Service to monitor a PBX system which has little or no phone traffic before 9:00 AM or
+  after 6:00 PM, then enter 9:00 AM and 6:00 PM.</dd>
+  <dt>Custom timeout command</dt>
+  <dd>The specified program is run in response to a timeout as defined in the preceding fields.
+  This command must refer to a valid .EXE or .CMD file that can be run from the service.  An example
+  of such a command may be a command-line application that sends an e-mail or calls a pager.  If the
+  program path contains a space, the path should be enclosed in double quotes.  Any parameters to the
+  program can follow the program path.  Please note that the application is run in the same security
+  context as the service. Please click <a href="servicesecurity.html">here</a> for more information
+  regarding service security.</dd>
+  <dt>Net Send recipient list</dt>
+  <dd>In addition to or instead of the Custom timeout command, you can simply enter a list of 
+  Microsoft Networking user or workstation names that will receive popup messages whenever timeouts occur.
+  When a timeout occurs, a Microsoft Networking popup message will be sent to the specified workstations.
+  Up to 10 user or workstation names can be specified, separated by commas.  The message is sent
+  using the Windows NET.EXE SEND command.  The recipient names much match the Microsoft Networking user logon name
+  (without the NT domain prefix) or the workstation name (defined in My Computer Properties).</dd>
+</dl>
+
+</body>
+
+</html>

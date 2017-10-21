@@ -1,0 +1,376 @@
+# Microsoft Developer Studio Generated Dependency File, included by SerialLoggerConfig.mak
+
+.\AboutDlg.cpp : \
+	"..\..\..\..\program files\html help workshop\include\htmlhelp.h"\
+	"..\..\..\..\program files\microsoft sdk\include\basetsd.h"\
+	"..\..\..\..\program files\microsoft sdk\include\guiddef.h"\
+	"..\..\..\..\program files\microsoft sdk\include\propidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\reason.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shldisp.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shobjidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shtypes.h"\
+	"..\..\..\..\program files\microsoft sdk\include\stralign.h"\
+	"..\..\..\..\program files\microsoft sdk\include\tvout.h"\
+	"..\Common\BuildTimestamp.h"\
+	"..\Common\SerialLoggerCommon.h"\
+	"..\CSmtp\Base64.h"\
+	"..\CSmtp\Smtp.h"\
+	".\AboutDlg.h"\
+	".\InstanceListDoc.h"\
+	".\Resource.h"\
+	".\SMConfig.h"\
+	".\StdAfx.h"\
+	".\Utilities.h"\
+	
+
+..\CSmtp\Base64.cpp : \
+	"..\..\..\..\program files\html help workshop\include\htmlhelp.h"\
+	"..\..\..\..\program files\microsoft sdk\include\basetsd.h"\
+	"..\..\..\..\program files\microsoft sdk\include\guiddef.h"\
+	"..\..\..\..\program files\microsoft sdk\include\propidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\reason.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shldisp.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shobjidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shtypes.h"\
+	"..\..\..\..\program files\microsoft sdk\include\stralign.h"\
+	"..\..\..\..\program files\microsoft sdk\include\tvout.h"\
+	"..\Common\BuildTimestamp.h"\
+	"..\Common\SerialLoggerCommon.h"\
+	"..\CSmtp\Base64.h"\
+	"..\CSmtp\Smtp.h"\
+	".\StdAfx.h"\
+	
+
+..\Common\BuildTimestamp.cpp : \
+	"..\Common\BuildTimestamp.h"\
+	
+
+.\CATSETS.CPP : \
+	"..\..\..\..\program files\html help workshop\include\htmlhelp.h"\
+	"..\..\..\..\program files\microsoft sdk\include\basetsd.h"\
+	"..\..\..\..\program files\microsoft sdk\include\guiddef.h"\
+	"..\..\..\..\program files\microsoft sdk\include\propidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\reason.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shldisp.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shobjidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shtypes.h"\
+	"..\..\..\..\program files\microsoft sdk\include\stralign.h"\
+	"..\..\..\..\program files\microsoft sdk\include\tvout.h"\
+	"..\Common\BuildTimestamp.h"\
+	"..\Common\SerialLoggerCommon.h"\
+	"..\CSmtp\Base64.h"\
+	"..\CSmtp\Smtp.h"\
+	".\CATSETS.H"\
+	".\StdAfx.h"\
+	
+
+.\EmailPage.cpp : \
+	"..\..\..\..\program files\html help workshop\include\htmlhelp.h"\
+	"..\..\..\..\program files\microsoft sdk\include\basetsd.h"\
+	"..\..\..\..\program files\microsoft sdk\include\guiddef.h"\
+	"..\..\..\..\program files\microsoft sdk\include\propidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\reason.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shldisp.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shobjidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shtypes.h"\
+	"..\..\..\..\program files\microsoft sdk\include\stralign.h"\
+	"..\..\..\..\program files\microsoft sdk\include\tvout.h"\
+	"..\Common\BuildTimestamp.h"\
+	"..\Common\SerialLoggerCommon.h"\
+	"..\CSmtp\Base64.h"\
+	"..\CSmtp\Smtp.h"\
+	".\EmailPage.h"\
+	".\GeneralPage.h"\
+	".\Resource.h"\
+	".\SMConfig.h"\
+	".\StdAfx.h"\
+	".\Utilities.h"\
+	
+
+.\GeneralPage.cpp : \
+	"..\..\..\..\program files\html help workshop\include\htmlhelp.h"\
+	"..\..\..\..\program files\microsoft sdk\include\basetsd.h"\
+	"..\..\..\..\program files\microsoft sdk\include\guiddef.h"\
+	"..\..\..\..\program files\microsoft sdk\include\propidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\reason.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shldisp.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shobjidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shtypes.h"\
+	"..\..\..\..\program files\microsoft sdk\include\stralign.h"\
+	"..\..\..\..\program files\microsoft sdk\include\tvout.h"\
+	"..\Common\BuildTimestamp.h"\
+	"..\Common\SerialLoggerCommon.h"\
+	"..\CSmtp\Base64.h"\
+	"..\CSmtp\Smtp.h"\
+	".\GeneralPage.h"\
+	".\Resource.h"\
+	".\SMConfig.h"\
+	".\StdAfx.h"\
+	".\Utilities.h"\
+	
+
+.\InstanceListDoc.cpp : \
+	"..\..\..\..\program files\html help workshop\include\htmlhelp.h"\
+	"..\..\..\..\program files\microsoft sdk\include\basetsd.h"\
+	"..\..\..\..\program files\microsoft sdk\include\guiddef.h"\
+	"..\..\..\..\program files\microsoft sdk\include\propidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\reason.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shldisp.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shobjidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shtypes.h"\
+	"..\..\..\..\program files\microsoft sdk\include\stralign.h"\
+	"..\..\..\..\program files\microsoft sdk\include\tvout.h"\
+	"..\Common\BuildTimestamp.h"\
+	"..\Common\SerialLoggerCommon.h"\
+	"..\CSmtp\Base64.h"\
+	"..\CSmtp\Smtp.h"\
+	".\AboutDlg.h"\
+	".\InstanceListDoc.h"\
+	".\RegDlg.h"\
+	".\Resource.h"\
+	".\SMConfig.h"\
+	".\StdAfx.h"\
+	".\Utilities.h"\
+	
+
+.\InstanceListView.cpp : \
+	"..\..\..\..\program files\html help workshop\include\htmlhelp.h"\
+	"..\..\..\..\program files\microsoft sdk\include\basetsd.h"\
+	"..\..\..\..\program files\microsoft sdk\include\guiddef.h"\
+	"..\..\..\..\program files\microsoft sdk\include\propidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\reason.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shldisp.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shobjidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shtypes.h"\
+	"..\..\..\..\program files\microsoft sdk\include\stralign.h"\
+	"..\..\..\..\program files\microsoft sdk\include\tvout.h"\
+	"..\Common\BuildTimestamp.h"\
+	"..\Common\SerialLoggerCommon.h"\
+	"..\CSmtp\Base64.h"\
+	"..\CSmtp\Smtp.h"\
+	".\EmailPage.h"\
+	".\GeneralPage.h"\
+	".\InstanceListDoc.h"\
+	".\InstanceListView.h"\
+	".\OdbcPage.h"\
+	".\Resource.h"\
+	".\SMConfig.h"\
+	".\StdAfx.h"\
+	".\TimeoutPage.h"\
+	".\Utilities.h"\
+	
+
+.\MainFrm.cpp : \
+	"..\..\..\..\program files\html help workshop\include\htmlhelp.h"\
+	"..\..\..\..\program files\microsoft sdk\include\basetsd.h"\
+	"..\..\..\..\program files\microsoft sdk\include\guiddef.h"\
+	"..\..\..\..\program files\microsoft sdk\include\propidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\reason.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shldisp.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shobjidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shtypes.h"\
+	"..\..\..\..\program files\microsoft sdk\include\stralign.h"\
+	"..\..\..\..\program files\microsoft sdk\include\tvout.h"\
+	"..\Common\BuildTimestamp.h"\
+	"..\Common\SerialLoggerCommon.h"\
+	"..\CSmtp\Base64.h"\
+	"..\CSmtp\Smtp.h"\
+	".\MainFrm.h"\
+	".\Resource.h"\
+	".\SMConfig.h"\
+	".\StdAfx.h"\
+	".\Utilities.h"\
+	
+
+.\OdbcPage.cpp : \
+	"..\..\..\..\program files\html help workshop\include\htmlhelp.h"\
+	"..\..\..\..\program files\microsoft sdk\include\basetsd.h"\
+	"..\..\..\..\program files\microsoft sdk\include\guiddef.h"\
+	"..\..\..\..\program files\microsoft sdk\include\propidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\reason.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shldisp.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shobjidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shtypes.h"\
+	"..\..\..\..\program files\microsoft sdk\include\stralign.h"\
+	"..\..\..\..\program files\microsoft sdk\include\tvout.h"\
+	"..\Common\BuildTimestamp.h"\
+	"..\Common\SerialLoggerCommon.h"\
+	"..\CSmtp\Base64.h"\
+	"..\CSmtp\Smtp.h"\
+	".\OdbcPage.h"\
+	".\Resource.h"\
+	".\SMConfig.h"\
+	".\StdAfx.h"\
+	".\TableDialog.h"\
+	".\Utilities.h"\
+	
+
+.\RegDlg.cpp : \
+	"..\..\..\..\program files\html help workshop\include\htmlhelp.h"\
+	"..\..\..\..\program files\microsoft sdk\include\basetsd.h"\
+	"..\..\..\..\program files\microsoft sdk\include\guiddef.h"\
+	"..\..\..\..\program files\microsoft sdk\include\propidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\reason.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shldisp.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shobjidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shtypes.h"\
+	"..\..\..\..\program files\microsoft sdk\include\stralign.h"\
+	"..\..\..\..\program files\microsoft sdk\include\tvout.h"\
+	"..\Common\BuildTimestamp.h"\
+	"..\Common\SerialLoggerCommon.h"\
+	"..\CSmtp\Base64.h"\
+	"..\CSmtp\Smtp.h"\
+	".\InstanceListDoc.h"\
+	".\RegDlg.h"\
+	".\Resource.h"\
+	".\SMConfig.h"\
+	".\StdAfx.h"\
+	".\Utilities.h"\
+	
+
+..\Common\SerialLoggerCommon.cpp : \
+	"..\..\..\..\program files\html help workshop\include\htmlhelp.h"\
+	"..\..\..\..\program files\microsoft sdk\include\basetsd.h"\
+	"..\..\..\..\program files\microsoft sdk\include\guiddef.h"\
+	"..\..\..\..\program files\microsoft sdk\include\propidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\reason.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shtypes.h"\
+	"..\..\..\..\program files\microsoft sdk\include\stralign.h"\
+	"..\..\..\..\program files\microsoft sdk\include\tvout.h"\
+	"..\..\..\..\program files\microsoft sdk\include\winefs.h"\
+	"..\Common\BuildTimestamp.h"\
+	"..\Common\SerialLoggerCommon.h"\
+	"..\CSmtp\Base64.h"\
+	"..\CSmtp\Smtp.h"\
+	
+
+.\SMConfig.cpp : \
+	"..\..\..\..\program files\html help workshop\include\htmlhelp.h"\
+	"..\..\..\..\program files\microsoft sdk\include\basetsd.h"\
+	"..\..\..\..\program files\microsoft sdk\include\guiddef.h"\
+	"..\..\..\..\program files\microsoft sdk\include\propidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\reason.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shldisp.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shobjidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shtypes.h"\
+	"..\..\..\..\program files\microsoft sdk\include\stralign.h"\
+	"..\..\..\..\program files\microsoft sdk\include\tvout.h"\
+	"..\Common\BuildTimestamp.h"\
+	"..\Common\SerialLoggerCommon.h"\
+	"..\CSmtp\Base64.h"\
+	"..\CSmtp\Smtp.h"\
+	".\InstanceListDoc.h"\
+	".\InstanceListView.h"\
+	".\MainFrm.h"\
+	".\Resource.h"\
+	".\SMConfig.h"\
+	".\StdAfx.h"\
+	".\Utilities.h"\
+	
+
+..\CSmtp\Smtp.cpp : \
+	"..\..\..\..\program files\html help workshop\include\htmlhelp.h"\
+	"..\..\..\..\program files\microsoft sdk\include\basetsd.h"\
+	"..\..\..\..\program files\microsoft sdk\include\guiddef.h"\
+	"..\..\..\..\program files\microsoft sdk\include\propidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\reason.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shldisp.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shobjidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shtypes.h"\
+	"..\..\..\..\program files\microsoft sdk\include\stralign.h"\
+	"..\..\..\..\program files\microsoft sdk\include\tvout.h"\
+	"..\Common\BuildTimestamp.h"\
+	"..\Common\SerialLoggerCommon.h"\
+	"..\CSmtp\Base64.h"\
+	"..\CSmtp\Smtp.h"\
+	".\StdAfx.h"\
+	
+
+.\StdAfx.cpp : \
+	"..\..\..\..\program files\html help workshop\include\htmlhelp.h"\
+	"..\..\..\..\program files\microsoft sdk\include\basetsd.h"\
+	"..\..\..\..\program files\microsoft sdk\include\guiddef.h"\
+	"..\..\..\..\program files\microsoft sdk\include\propidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\reason.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shldisp.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shobjidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shtypes.h"\
+	"..\..\..\..\program files\microsoft sdk\include\stralign.h"\
+	"..\..\..\..\program files\microsoft sdk\include\tvout.h"\
+	"..\Common\BuildTimestamp.h"\
+	"..\Common\SerialLoggerCommon.h"\
+	"..\CSmtp\Base64.h"\
+	"..\CSmtp\Smtp.h"\
+	".\StdAfx.h"\
+	
+
+.\TableDialog.cpp : \
+	"..\..\..\..\program files\html help workshop\include\htmlhelp.h"\
+	"..\..\..\..\program files\microsoft sdk\include\basetsd.h"\
+	"..\..\..\..\program files\microsoft sdk\include\guiddef.h"\
+	"..\..\..\..\program files\microsoft sdk\include\propidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\reason.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shldisp.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shobjidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shtypes.h"\
+	"..\..\..\..\program files\microsoft sdk\include\stralign.h"\
+	"..\..\..\..\program files\microsoft sdk\include\tvout.h"\
+	"..\Common\BuildTimestamp.h"\
+	"..\Common\SerialLoggerCommon.h"\
+	"..\CSmtp\Base64.h"\
+	"..\CSmtp\Smtp.h"\
+	".\CATSETS.H"\
+	".\Resource.h"\
+	".\SMConfig.h"\
+	".\StdAfx.h"\
+	".\TableDialog.h"\
+	".\Utilities.h"\
+	
+
+.\TimeoutPage.cpp : \
+	"..\..\..\..\program files\html help workshop\include\htmlhelp.h"\
+	"..\..\..\..\program files\microsoft sdk\include\basetsd.h"\
+	"..\..\..\..\program files\microsoft sdk\include\guiddef.h"\
+	"..\..\..\..\program files\microsoft sdk\include\propidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\reason.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shldisp.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shobjidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shtypes.h"\
+	"..\..\..\..\program files\microsoft sdk\include\stralign.h"\
+	"..\..\..\..\program files\microsoft sdk\include\tvout.h"\
+	"..\Common\BuildTimestamp.h"\
+	"..\Common\SerialLoggerCommon.h"\
+	"..\CSmtp\Base64.h"\
+	"..\CSmtp\Smtp.h"\
+	".\Resource.h"\
+	".\SMConfig.h"\
+	".\StdAfx.h"\
+	".\TimeoutPage.h"\
+	".\Utilities.h"\
+	
+
+.\Utilities.cpp : \
+	"..\..\..\..\program files\html help workshop\include\htmlhelp.h"\
+	"..\..\..\..\program files\microsoft sdk\include\basetsd.h"\
+	"..\..\..\..\program files\microsoft sdk\include\guiddef.h"\
+	"..\..\..\..\program files\microsoft sdk\include\propidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\reason.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shldisp.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shobjidl.h"\
+	"..\..\..\..\program files\microsoft sdk\include\shtypes.h"\
+	"..\..\..\..\program files\microsoft sdk\include\stralign.h"\
+	"..\..\..\..\program files\microsoft sdk\include\tvout.h"\
+	"..\Common\BuildTimestamp.h"\
+	"..\Common\SerialLoggerCommon.h"\
+	"..\CSmtp\Base64.h"\
+	"..\CSmtp\Smtp.h"\
+	".\StdAfx.h"\
+	".\Utilities.h"\
+	
+
+.\SMConfig.rc : \
+	"..\Common\CommonResource.h"\
+	".\res\idr_main.ico"\
+	".\res\SMConfig.rc2"\
+	".\Resource.h"\
+	

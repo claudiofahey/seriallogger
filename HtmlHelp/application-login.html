@@ -1,0 +1,65 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<title>Advanced Application - Sending Login Commands</title>
+<link rel="stylesheet" type="text/css" href="coua.css">
+<object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<param name="keyword" value="login command, sending">
+	<param name="keyword" value="send start command">
+	<param name="keyword" value="send login command">
+</object>
+
+</head>
+
+<body>
+
+<h1>Sending Login Commands</h1>
+
+<p>Some serial devices require that they receive a "login" or "start" command before they start
+sending serial data to Serial Logger Service. Currently, Serial Logger Service has no capability
+to send data to the serial port. However, with a creative batch file, you may be able to use the
+Custom Timeout Command feature to send such a "login" command.</p>
+
+<p>The timeout feature allows a program or batch file to run whenever no data is received
+for a specified amount of time.
+To accomplish your goal, you use the Custom Timeout Command to run a batch file that will stop the service, 
+send the "login" command to the serial port, and then restart the service.  The service must be
+stopped because when it is running, no other application may access the serial port.</p>
+
+<p>Here's an example of such a batch file called CustomTimeoutCommand.cmd.</p>
+
+<pre>net stop seriallogger1
+echo myusername > com2
+echo mypass > com2
+echo start send > com2
+net start seriallogger1
+</pre>
+
+<p>After creating this batch file, configure Serial Logger Service as follows:</p>
+<ol>
+  <li>In the Timeout Settings properties page, set "Timeout if no data is received in __ seconds" to
+  whatever is appropriate.  If no data is received for this many seconds, then the service will run the batch file.
+  If you expect that normal operation of the serial device sends data at least every 5 minutes,
+  then set this to 300 seconds.</li>
+  <li>Check all days of the week and the Entire Day checkbox.</li>
+  <li>Enter the full path and file name for CustomTimeoutCommand.cmd in the Custom timeout command field.</li>
+  <li>Restart the service so that the new parameters take effect.</li>
+</ol>
+
+<p>One drawback to this method is that when the service is first started, 
+the "login" command is not sent immediately. It will only be sent after waiting
+for the specified number of seconds. This problem can be minimized by choosing a smaller value
+for the timeout seconds.</p>
+
+<p>If the serial device requires a complex login sequence that simple "echo" commands can't accomplish,
+you may use any console-mode (command-line) application that can be scripted to communicate
+with a serial port. Perl should work well for most applications.</p>
+
+<p>An alternative to the timeout approach is to use the Windows Scheduler service (Scheduled Tasks)
+to run the same CustomTimeoutCommand.cmd batch file on a periodic basis such as every hour.
+However, you run the risk of losing a small amount of data if it is received during the brief period
+when the service is stopped.</p>
+
+</body></html>

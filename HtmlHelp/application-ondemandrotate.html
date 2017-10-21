@@ -1,0 +1,62 @@
+<!doctype html public "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<title>Advanced Application - Rotate Log on Demand</title>
+<link rel="stylesheet" type="text/css" href="coua.css">
+<object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<param name="keyword" value="log rotate">
+	<param name="keyword" value="rotate">
+	<param name="keyword" value="manual log rotate">
+	<param name="keyword" value="manual rotate">
+</object>
+
+</head>
+
+<body>
+
+<h1>Rotating the Log File on Demand</h1>
+
+<p>In some applications, you may want Serial Logger Service to create a new log file at
+unpredictable times whenever you need the data. For instance, you may want to run
+a simple program or batch file (.CMD or .BAT) that will import the current log file and then have
+Serial Logger Service start using a new blank log file.</p>
+
+<p>The batch file below is an example that will move the latest Serial Logger Service
+log file (called pbx.txt) to an import directory that another appliication (such as a PBX
+call analysis program) will import from.  It is expected that this other application
+will delete or move the file from the import directory after it has successfully imported
+the file.</p>
+
+<p><b>Note:</b> This batch file assumes that Serial Logger Service is configured to NOT use
+periodic log rotation.  The Log Rotation setting should be set to None.</p>
+
+<p>This batch file performs the following steps:</p>
+
+<ol>
+  <li>Checks to see if the file c:\ToImport\pbx.txt already exists.  If it does, then the batch
+  file stops because otherwise it would overwrite a file which hasn't been imported, yet.</li>
+  <li>Pauses the first instance of Serial Logger Service.</li>
+  <li>Moves the latest log file pbx.txt to c:\ToImport\pbx.txt.</li>
+  <li>Continues the service.</li>
+</ol>
+
+
+<pre>@echo off
+if exist c:\ToImport\pbx.txt goto :alreadyexists
+net pause seriallogger1
+move "c:\Program Files\Serial Logger Service\pbx.txt" c:\ToImport
+net continue seriallogger1
+goto :end
+
+:alreadyexists
+echo.
+echo Cannot copy latest data because the import file already exists
+echo in the import directory.
+echo.
+
+:end
+</pre>
+
+</body></html>

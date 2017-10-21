@@ -1,0 +1,132 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<title>Instance Properties (ODBC)</title>
+<link rel="stylesheet" type="text/css" href="coua.css">
+<object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<param name="keyword" value="ODBC">
+	<param name="keyword" value="database">
+	<param name="keyword" value="SQL">
+	<param name="keyword" value="Access">
+	<param name="keyword" value="DSN">
+</object>
+</head>
+
+<body>
+
+<h1>Instance Properties (ODBC)</h1>
+<p>In addition to or instead of writing to a plain text log file, Serial Logger Service
+can be configured to write directly to an ODBC database.  This allows data to be
+written to any ODBC-compatible database including Microsoft SQL Server, Microsoft Access,
+Oracle, dBase, FoxPro, Paradox, and many others.    This feature
+is only useful for text data where each line ends in a carriage return and/or line feed 
+(ASCII 0D and 0A).</p>
+<p>If you want to log only to an ODBC data source and not to a plain text log 
+file, then simply leave the Log File field blank. If it is blank, then all log 
+file-related functions will not work, including log rotation, and e-mailing of 
+log files.</p>
+<p><b>Note:</b> When logging to an ODBC data source, there are a lot more elements that may
+not work compared to logging to a plain text log file. It is also significantly more
+resource intensive and may be too slow to keep up with incoming data for some applications.
+Because of this, ODBC logging should only be used if it is required for a certain
+application.</p>
+<p>All of the following parameters are required in order to have Serial Logger Service write to an
+ODBC database.</p>
+<dl>
+  <dt>Connect String <em>(required)</em></dt>
+  <dd><p>This is the ODBC connection string which specifies, the ODBC Data Source Name (DSN), the user name and
+  password, and any other parameters required by the ODBC driver to establish a connection.
+  The easiest way to determine this is to click the <b>Build Connect String</b> button and
+  browse for the correct DSN.</p>
+  <p>If you are using a DSN which uses NTLM authentation such as a SQL Server Trusted Connection,
+  you may need to <a href="servicesecurity.html">change the service's logon account</a>
+  to a user that has been granted access to the DSN.</p>
+  <p>The entire ODBC connection string is stored in the Registry. If you are using a DSN which
+  requires a password to be stored in the connection string, then you should restrict access to the
+  associated registry key. To do this, use REGEDT32.EXE and modify the security of the registry key
+  HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SerialLogger<i>X</i>\Parameters
+  (where <i>X</i> is the instance number) so that
+  only trusted accounts have read access to it. For Serial Logger Service to function properly,
+  the SYSTEM account must have read access to this key and all of its subkeys.</p></dd>
+  <dt>Build Connect String button</dt>
+  <dd><p>Click this button to browse for or create an ODBC DSN.
+  After selecting a DSN, you will be prompted for any other required information
+  such as your user name and password.</p>
+  <p>Since Serial Logger Service usually runs under the
+  <a href="servicesecurity.html">SYSTEM account</a>, it is recommended that a Machine Data Source
+  that is available to all users on the machine (System Data Source) be used.</p></dd>
+  <dt>SQL Statement <em>(required)</em></dt>
+  <dd><p>This is the actual SQL statement that will be executed after each line is read from the
+  serial port. The end of each line is delimited by a carriage return and/or a line feed.
+  This statement must have exactly one parameter marker which is identified
+  as a question mark (?). When the statement executes, the parameter will be replaced
+  with the actual text that was read from the serial port.
+  The carriage return and line feed characters are not included as part of the parameter.
+  Only one parameter marker
+  may be specified.</p>
+  <p>The following are examples of the variety of SQL statements that
+  are possible. Except for the first statement, these may not work with
+  all ODBC data sources.</p>
+  <dl>
+    <dt>INSERT INTO PhoneLog (line) VALUES (?)</dt>
+    <dd>This is the type of statement created with the <b>Build SQL Statement</b> button.  It inserts
+    the entire line into the single column called <i>line</i> of the table called <i>PhoneLog</i>.
+    This statement works with all types of ODBC data sources.</dd>
+    <dt>INSERT INTO [Phone Log] ([line data]) VALUES (?)</dt>
+    <dd>This is like the above statement but shows how to use square brackets around the table name
+    and column name when they contain spaces or other non-alphanumeric characters.</dd>
+    <dt>INSERT INTO PhoneLog (PortName, Line) SELECT 'COM2', ?</dt>
+    <dd>This is like the first statement but also puts the value "COM2" into the column called
+    <i>PortName</i>. Such a statement is useful if you record data from several sources into the
+    same table.</dd>
+    <dt>INSERT INTO PhoneLog (line) SELECT {fn SUBSTRING(?,10,20)}</dt>
+    <dd>This is like the first statement but only inserts 20 characters of the line starting
+    at the 10th character.  The "{fn SUBSTRING}" part is an ODBC escape sequence
+    that is converted by the ODBC driver into the native SQL function that is appropriate
+    for the data source.</dd>
+    <dt>{call ProcessLine(?)}</dt>
+    <dd>This statement runs a procedure called ProcessLine and passes the entire line as
+    its first parameter. The procedure is defined by the data source and can perform a variety
+    of tasks such as parsing the line into fixed-width or comma-delimited fields.
+		<p>You can create a procedure in Microsoft Access 2000 or above by 
+		creating a parameter query such as this:<br />
+		&nbsp;&nbsp;&nbsp;&nbsp;PARAMETERS line Text ( 255 );<br />
+		&nbsp;&nbsp;&nbsp;&nbsp;INSERT INTO tblData ( f2, f3 )<br />
+		&nbsp;&nbsp;&nbsp;&nbsp;SELECT Left([line],4) AS Expr2, Mid([line],5,8) AS Expr3;<br />		
+		</p>
+		</dd>
+    <dt>
+    DECLARE @s varchar(4000)<br />
+    SET	 @s = ?<br />
+    INSERT INTO PhoneLog (time, part1, part2) SELECT GETDATE(), LEFT(@s,9), SUBSTRING(@s,10,20)
+    </dt>
+    <dd>This set of statements works with Microsoft SQL Server and shows how to use a temporary
+    variable to split a fixed-width line into two fields. This could also be accomplished
+    using a stored procedure.</dd>
+    <dt>
+    INSERT INTO PhoneLog (line, part1, part2) VALUES (@line:=?, MID(@line,1,9), MID(@line,10,20))
+    </dt>
+    <dd>This set of statements works with MYSQL and shows how to use a temporary
+    variable to split a fixed-width line into two fields.</dd>
+  </dl>
+ 
+  </dd>
+  <dt>Build SQL Statement button</dt>
+  <dd>Click this button to automatically create a simple SQL statement that inserts the data
+  into a single text column of a table.</dd>
+  <dt>Execute With Test String button</dt>
+  <dd>Click this button to execute the SQL statement with a simple test string. This is useful
+  to verify that the SQL statement is valid.</dd>
+  <dt>Max Line Length <em>(required)</em></dt>
+  <dd><p>This is the maximum number of characters that will be passed as the parameter to the SQL
+  statement. If you are inserting the data into a single column, this should be the maximum 
+  number of characters that the column can hold.  Any lines that exceed this number of
+  characters will be truncated when the SQL statement is executed.</p>
+  <p>This setting does not affect the length of each line written to the plain text log file.
+  The plain text log file has no limitations for the length of each line.</p></dd>
+</dl>
+
+</body>
+
+</html>

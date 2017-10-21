@@ -1,0 +1,164 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<title>Configuration</title>
+<link rel="stylesheet" type="text/css" href="coua.css">
+<object type="application/x-oleobject" 
+classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+  <param name="keyword" value="configuring">
+  <param name="keyword" value="instance">
+  <param name="keyword" value="service instance">
+  <param name="keyword" value="save settings">
+  <param name="keyword" value="new instance">
+  <param name="keyword" value="duplicate instance">
+  <param name="keyword" value="delete instance">
+</object>
+</head>
+
+<body>
+
+<h1>Configuration</h1>
+<p>Serial Logger Service can be configured using the Serial Logger Service Configuration 
+program that is found in the Start Menu.</p>
+<p><em>Note: You must be logged in as an administrator in order to change the configuration 
+or control the service in any way (start, stop, pause, continue).</em></p>
+
+<p>After making configuration changes, you must restart the services for the changes 
+to take effect. You can do this by right-clicking on the affected instances and 
+clicking <b>Restart</b> on the popup menu.</p>
+
+<h1>Service Instances</h1>
+<p>Serial Logger Service now allows multiple simultaneous instances to run. Each 
+instance has a completely independent set of configuration parameters such as serial 
+port configuration, log file, rotation options, timeout options, e-mail options, 
+and ODBC options. Each instance
+can be independently controlled (start, stop, pause, continue).
+When you first start the Serial Logger Service Configuration program, the first 
+instance will be created automatically. If you wish to run multiple instances, just 
+select <b>New</b> from the <b>Edit</b> menu and a new instance will be created. 
+The number of instances you can have is limited only by the number of serial ports 
+you have.</p>
+
+<h1>Service Instance List</h1>
+
+<p>The main window shows the list of service instances.  The list is divided into the following columns.</p>
+<dl>
+  <dt>Instance</dt>
+  <dd>The instance number.  The first instance is usually number 1.  The instance number
+  is not related to the serial port number.  It is just a way to identify each service instance.</dd>
+  <dt>Port</dt>
+  <dd>The serial port that the service instance reads from.</dd>
+  <dt>Status</dt>
+  <dd>The status of the service instance.  It will show Running, Stopped, or Paused. If it is
+  blank, then the service instance is not yet installed. You must save the configuration to
+  install the service.</dd>
+  <dt>Auto Start</dt>
+  <dd>The service instance auto start setting.  If Yes, then the service is configured to start when Windows 
+  starts. Otherwise, the service must be started manually.</dd>
+  <dt>Log File</dt>
+  <dd>The log file the the service instance is configured to write to.  If log rotation
+  is enabled, this will show only the base file name without the date/time suffix.</dd>
+</dl>
+
+<h1>Menu Commands</h1>
+
+<p>The following menu commands are available from the main window.</p>
+<dl>
+  <dt><b>File Menu</b></dt>
+  <dd>
+  <dl>
+    <dt>Save Settings</dt>
+    <dd>This command saves the configuration to the Windows Registry and modifies 
+    the Windows Services database as necessary to create the requested number of 
+    service instances. The configuration is also saved automatically before starting 
+    or restarting any services.</dd>
+    <dt>Exit</dt>
+    <dd>Exits the configuration application. Any services that are running will 
+    continue to run in the background, even if the user logs off.</dd>
+  </dl>
+  </dd>
+  <dt><b>Edit Menu</b></dt>
+  <dd>
+  <dl>
+    <dt>Note: Any configuration changes made through this menu are saved only
+    when the <b>Save Settings</b> menu command is selected or when 
+    starting a service. Also, any configuration changes are not actually applied
+    until the affected services are restarted.</dt>
+    <dt>Properties</dt>
+    <dd>
+    <p>Opens the properties window for the selected instances. The properties window 
+    is divided into three pages.</p>
+    <ul>
+      <li><a href="config-general.html">General</a></li>
+      <li><a href="config-timeout.html">Timeout Settings</a></li>
+      <li><a href="config-email.html">E-mail</a></li>
+      <li><a href="config-odbc.html">ODBC</a></li>
+    </ul>
+    <p>If multiple instances are selected, the configuration of the last selected 
+    instance will effectively be copied to all other selected instances. All fields 
+    are overwritten except for the serial port name and the log file name.</p>
+    <p>After making configuration changes, the affected services must be restarted 
+    for the changes to take effect.</p>
+    </dd>
+    <dt>New</dt>
+    <dd>Creates a new additional instance. The new instance will have completely 
+    independent configuration settings from other instances.</dd>
+    <dt>Duplicate</dt>
+    <dd>Copies the configuration parameters of the selected instance to a new instance.</dd>
+    <dt>Select All</dt>
+    <dd>Highlights all instances.</dd>
+    <dt>Delete</dt>
+    <dd>Deletes all selected instances. If you accidently delete an instance, you 
+    should exit the configuration application and answer No when prompted to save 
+    the configuration.</dd>
+  </dl>
+  </dd>
+  <dt><b>Service Menu</b></dt>
+  <dd>
+  <dl>
+    <dt>Start</dt>
+    <dd>Saves the configuration and then starts the selected services.</dd>
+    <dt>Stop</dt>
+    <dd>Stops the selected services.</dd>
+    <dt>Restart</dt>
+    <dd>Saves the configuration, stops any selected services that are running, and then starts all selected 
+    services.</dd>
+    <dt>Continue</dt>
+    <dd>Continues any selected services that are paused. This command causes a service 
+    to reopen its log file and write any buffered data that was received while the 
+    service was paused.</dd>
+    <dt>Pause</dt>
+    <dd>Pauses any selected services that are running. When a service is paused, 
+    it releases the lock on the log file so that it can be modified, deleted, or 
+    moved. While the service is paused, any data received on the serial port will 
+    be stored in an internal buffer and then written to the log file when the service 
+    is continued. Therefore, as long as the service is not stopped, no serial data 
+    will be lost. Please click <a href="running.html">here</a> for details.</dd>
+    <dt>Start Automatically</dt>
+    <dd>When checked, the selected services are configured to start when Windows 
+    starts. Otherwise, a service must be started manually.</dd>
+    <dt>Event Viewer</dt>
+    <dd>Launches the Windows Event Viewer (eventvwr.exe). The Application Log in 
+    Event Viewer contains detailed information about the status of the services. 
+    Click <a href="eventviewer.html">here</a> for details.</dd>
+  </dl>
+  </dd>
+  <dt><b>Help Menu</b></dt>
+  <dd>
+  <dl>
+    <dt>Serial Logger Service Help</dt>
+    <dd>Opens the on-line help. On Windows NT 4.0, you must have Microsoft Internet 
+    Explorer 4.0 or above in order to view the online help.</dd>
+    <dt>Register Product</dt>
+    <dd>After purchasing this product on the web site, use the command to enter your registration
+    code to remove the <a href="unregisteredrestrictions.html">unregistered restrictions</a>.</dd>
+    <dt>About Serial Logger Services</dt>
+    <dd>View the product version and registration details.</dd>
+  </dl>
+  </dd>
+</dl>
+
+</body>
+
+</html>
